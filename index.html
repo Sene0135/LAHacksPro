@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript - To Do List</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cousine">
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+
+      <label class="switch">
+        <input type="checkbox" class="checkbox" onclick="toggleDark()">
+        <span class="slider round"></span>
+      </label>
+
+      <div class="info-btn">
+        <svg class="info" onclick="pop()" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM216 336h24V272H216c-13.3 0-24-10.7-24-24s10.7-24 24-24h48c13.3 0 24 10.7 24 24v88h8c13.3 0 24 10.7 24 24s-10.7 24-24 24H216c-13.3 0-24-10.7-24-24s10.7-24 24-24zm40-208a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"/></svg>
+      </div>
+      <div class="clear">
+        <i class="fa fa-refresh"></i>
+      </div>
+      <div id="date"></div>
+      <progress id="js-progress" value="0" max="1500"></progress>
+      <div class="progress-bar"></div>
+      <p class="p1">Pom Pom GO!</p>
+      <div class="timer">
+        <div class="button-group mode-buttons" id="js-mode-buttons">
+            <button data-mode="pomodoro" class="button mode-button active" id="js-pomodoro">
+              Pomodoro
+            </button>
+            <button data-mode="shortBreak" class="button mode-button" id="js-short-break">
+              Short break
+            </button>
+            <button data-mode="longBreak" class="button mode-button" id="js-long-break">
+              Long break
+            </button>
+          </div>
+          <div class="clock" id="js-clock">
+            <span id="js-minutes">25</span>
+            <span class="separator">:</span>
+            <span id="js-seconds">00</span>
+          </div>
+          <button class="main-button" data-action="start" id="js-btn">Start</button>
+        </div>
+        </div>
+        <div class="content">
+            <ul id="list"></ul>
+        </div>
+        <div class="container2">
+            <div class="add-to-do">
+                <i class="fa fa-plus-circle"></i>
+                <input type="text" id="input" placeholder="Add a task">
+            </div>
+        </div>
+          <span class="popup-text">The pillars of productivity are efficiency, accuracy, and focus. The Pomoduro method takes these concepts and helps you form a work flow that will not improve your academics but also give you more time to be you. The Pomodoro technique involves breaking down work into 25-minute intervals (pomodoros) with 5 minute short breaks in between, followed by a longer 15 minute break after four pomodoros.  </span>
+      </div>
+    <div class="hidden">
+        <!-- Short n Long break -->
+        <audio src="audio/ringing.mp3" data-sound="pomodoro"></audio>
+        <!-- Pomodoro -->
+        <audio src="audio/hooray.mp3" data-sound="shortBreak"></audio>
+        <audio src="break.mp3" data-sound="longBreak"></audio>
+    </div>
+    <script src="js/todo.js"></script>
+    <script src="js/timer.js"></script>
+    <script src="js/pop.js"></script>
+    <script src="js/shake.js"></script>
+    <script src="js/darkmode.js"></script>
+</body>
+</html>
